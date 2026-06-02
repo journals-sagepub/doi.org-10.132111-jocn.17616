@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal of Clinical Nursing</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* =======================================
+   WILEY HEADER
+======================================= */
+
+.wiley-header{
+    width:100%;
+    background:#ffffff;
+    border-bottom:1px solid #dcdcdc;
+}
+
+.top-header{
+    max-width:1400px;
+    margin:auto;
+    padding:25px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO */
+
+.logo-area img{
+    width:180px;
+    height:auto;
+    display:block;
+}
+
+/* SEARCH */
+
+.search-area{
+    display:flex;
+    align-items:center;
+}
+
+.search-area input{
+    width:300px;
+    height:48px;
+    border:1px solid #999;
+    padding:0 15px;
+    font-size:15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.search-area button{
+    width:55px;
+    height:48px;
+    border:none;
+    background:#777;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* LOGIN */
+
+.login-area a{
+    font-size:14px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#003366;
+    text-decoration:none;
+}
+
+/* =======================================
+   TOP AD BANNER
+======================================= */
+
+.banner-top{
+    background:#fff;
+    text-align:center;
+    padding:15px 0;
+}
+
+.banner-top img{
+    max-width:728px;
+    width:100%;
+    height:auto;
+}
+
+/* =======================================
+   JCN HEADER
+======================================= */
+
+.jcn-header{
+    max-width:1400px;
+    margin:auto;
+    padding:25px 30px;
+}
+
+.jcn-header img{
+    width:500px;
+    max-width:100%;
+}
+
+/* =======================================
+   MAIN LAYOUT
+======================================= */
+
+.container{
+    max-width:1280px;
+    margin:auto;
+    display:flex;
+    gap:40px;
+    padding:0 20px 40px;
+}
+
+.content{
+    flex:1;
+    background:white;
+    padding:20px 0;
+    max-width:860px;
+}
+
+.sidebar{
+    width:260px;
+    flex:none;
+    padding-left:25px;
+    border-left:1px solid #e5e5e5;
+}
+
+/* =======================================
+   ARTICLE
+======================================= */
+
+.category{
+    font-size:14px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.title{
+    font-size:48px;
+    line-height:1.25;
+    margin-bottom:25px;
+    color:#111;
+}
+
+.authors{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height:1.9;
+    letter-spacing:0.1px;
+    color:#0a5ea8;
+    margin-bottom:15px;
+}
+
+.meta{
+    margin-top:10px;
+    margin-bottom:25px;
+    color:#666;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.tools{
+    margin-top:25px;
+    display:flex;
+    gap:25px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:25px;
+}
+
+.tools a{
+    text-decoration:none;
+    color:#003366;
+    font-weight:bold;
+}
+
+/* =======================================
+   SECTION
+======================================= */
+
+section{
+    margin-top:55px;
+}
+
+section h2{
+    font-family:'Noto Serif', Georgia, serif;
+    font-size:34px;
+    font-weight:700;
+    color:#003366;
+    margin-top:40px;
+    margin-bottom:25px;
+    letter-spacing:-0.3px;
+}
+
+section h3{
+    font-size:20px;
+    font-weight:700;
+    margin-top:25px;
+    margin-bottom:12px;
+    line-height:1.5;
+}
+
+section p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+    line-height:1.95;
+    letter-spacing:0.15px;
+    color:#222;
+    text-align:justify;
+    margin-bottom:18px;
+}
+
+/* =======================================
+   TABLE
+======================================= */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#003366;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+/* =======================================
+   SIDEBAR
+======================================= */
+
+.card{
+    background:white;
+    padding:0;
+    margin-bottom:25px;
+    text-align:left;
+}
+
+.cover-box{
+    width:120px;
+    margin:0 auto 15px auto;
+    padding:0;
+    border:none;
+    background:none;
+}
+
+.cover-box img{
+    width:120px;
+    height:auto;
+    display:block;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:20px;
+    color:#003366;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card ul li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.card ul li:last-child{
+    border:none;
+}
+
+.ad{
+    background:#003d91;
+    color:white;
+    text-align:center;
+    padding:30px;
+    font-size:24px;
+    font-weight:bold;
+}
+.citation-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+z-index:9999;
+}
+
+.citation-content{
+background:#fff;
+width:600px;
+max-width:90%;
+margin:120px auto;
+padding:25px;
+border-radius:5px;
+position:relative;
+}
+
+.citation-content textarea{
+width:100%;
+height:180px;
+padding:10px;
+font-size:14px;
+}
+
+.close-btn{
+position:absolute;
+right:15px;
+top:10px;
+font-size:24px;
+cursor:pointer;
+}
+
+.citation-content button{
+margin-top:10px;
+padding:10px 20px;
+background:#003366;
+color:white;
+border:none;
+cursor:pointer;
+}
+/* =======================================
+   FOOTER
+======================================= */
+
+.footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+}
+
+/* =======================================
+   MOBILE
+======================================= */
+
+@media(max-width:900px){
+
+.top-header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.container{
+    flex-direction:column;
+}
+
+.search-area input{
+    width:220px;
+}
+
+.title{
+    font-family:'Noto Serif', Georgia, serif;
+    font-size:30px;
+    line-height:1.25;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================
+     HEADER WILEY
+======================================= -->
+
+<header class="wiley-header">
+
+<div class="top-header">
+
+<div class="logo-area">
+<img src="logo-header.png" alt="Wiley Online Library">
+</div>
+
+<div class="search-area">
+<input type="text" placeholder="Search">
+<button>🔍</button>
+</div>
+
+<div class="login-area">
+<a href="#">Login / Register</a>
+</div>
+
+</div>
+
+</header>
+
+<!-- =======================================
+     BANNER
+======================================= -->
+
+<div class="banner-top">
+<img src="14305816359348870606.png" alt="">
+</div>
+
+<!-- =======================================
+     JCN HEADER
+======================================= -->
+
+<div class="jcn-header">
+<img src="13652702.jpg" alt="Journal of Clinical Nursing">
+</div>
+
+<!-- =======================================
+     CONTENT
+======================================= -->
+
+<div class="container">
+
+<div class="content">
+
+<div class="category">
+EMPIRICAL RESEARCH QUANTITATIVE
+</div>
+
+<div class="title">
+The Effect of Prolanis Services Plus Home Visits on the Quality of Life of Patients with Type 2 Diabetes Mellitus in the Working Area of Jatinegara Health Center, East Jakarta
+</div>
+
+<div class="authors">
+Weny Murni, Ernawati, Aric Vranada
+</div>
+
+<div class="meta">
+Published: 31 May 2026 |
+DOI: d10.132111/jocn.17616
+</div>
+
+<div class="tools">
+<a href="https://drive.google.com/uc?export=download&id=1hi8R1IVnvcP_sv26RMGLz1EesYBh94JG" target="_blank">📄 PDF</a>
+<a href="#" onclick="openCitation()">📚 Cite</a>
+<a href="#">🔧 Tools</a>
+<a href="#">🔗 Share</a>
+<div id="citationModal" class="citation-modal">
+
+<div class="citation-content">
+
+<span class="close-btn" onclick="closeCitation()">&times;</span>
+
+<h3>APA Citation</h3>
+
+<textarea readonly>
+
+Weny Murni, Ernawati, Aric Vranada. (2026).
+The Effect of Prolanis Services Plus Home Visits on the Quality of Life of Patients with Type 2 Diabetes Mellitus in the Working Area of Jatinegara Health Center, East Jakarta.
+Journal of Clinical Nursing, 35(5), 123-135.
+https://doi.org/10.132111/jocn.17616
+
+</textarea>
+
+<button onclick="copyCitation()">Copy Citation</button>
+
+</div>
+
+</div>
+</div>
+
+<section>
+
+<h2>ABSTRACT</h2>
+
+<h3>Aims</h3>
+<p>
+This study aimed to analyze the effect of Prolanis services strengthened by structured home visits on the quality of life of patients with type 2 diabetes mellitus in the working area of Jatinegara Primary Health Center, East Jakarta.
+</p>
+
+<h3>Design</h3>
+<p>
+The study employed a quasi-experimental pre-test–post-test design with a control group. The research was conducted in two stages: development of a structured home visit module using a research and development approach, followed by implementation of the intervention over an eight-week period.
+</p>
+
+<h3>Methods</h3>
+<p>
+A total of 60 respondents were divided into an intervention group (n = 30) and a control group (n = 30). The intervention group received Prolanis services combined with four structured home visits, while the control group received routine Prolanis services only. Quality of life was measured using the WHOQOL-BREF questionnaire. Data were analyzed using the Wilcoxon test and Mann–Whitney test.
+</p>
+
+<h3>Results</h3>
+<p>
+There was no significant difference in baseline quality of life between the intervention and control groups (p = 0.818). Following the intervention, both groups demonstrated significant improvements in quality of life (p &lt; 0.001). The intervention group showed an increase in mean quality of life score from 74.73 to 96.10 (Δ = 21.37), while the control group increased from 73.07 to 90.47 (Δ = 17.40). The difference in improvement between groups was statistically significant (p = 0.010).
+</p>
+
+<h3>Conclusion</h3>
+<p>
+Strengthening Prolanis services through structured home visits resulted in greater improvements in quality of life among patients with type 2 diabetes mellitus compared with routine services alone. Structured home visits should be integrated into Prolanis as a sustainable strategy for patient monitoring and continuous health education. Future studies are recommended to involve larger sample sizes and longer intervention periods to assess long-term outcomes.
+</p>
+
+</section>
+
+<section>
+
+<h2>INTRODUCTION</h2>
+
+<p>
+Type 2 diabetes mellitus is a chronic disease that requires continuous management and significantly affects patients’ quality of life. The Chronic Disease Management Program (Prolanis) is a primary health care strategy designed to support disease control and improve health outcomes among patients with chronic illnesses. However, the implementation of Prolanis has not fully addressed individual patient needs, particularly in terms of continuous monitoring, personalized education, and support for self-management. Structured home visits have the potential to strengthen Prolanis services by providing direct patient engagement, individualized counseling, and closer follow-up. Therefore, this study aimed to analyze the effect of Prolanis services strengthened by structured home visits on the quality of life of patients with type 2 diabetes mellitus in the working area of Jatinegara Primary Health Center, East Jakarta.
+</p>
+
+</section>
+
+<!-- METHODS -->
+
+<section>
+
+<h2>METHODS</h2>
+
+<p>
+This study was conducted in two stages. The first stage involved the development of a structured home visit module using a research and development approach. The second stage employed a quasi-experimental pre-test–post-test design with a control group. A total of 60 respondents were recruited and divided equally into an intervention group (n = 30) and a control group (n = 30). The intervention group received routine Prolanis services combined with four structured home visits over an eight-week period, while the control group received routine Prolanis services only. Quality of life was measured using the WHOQOL-BREF questionnaire. Statistical analyses were performed using the Wilcoxon test and Mann–Whitney test to evaluate changes within and between groups.
+</p>
+
+</section>
+
+<!-- RESULTS -->
+
+<section>
+
+<h2>RESULTS</h2>
+
+<table>
+
+<tr>
+<th>Variable</th>
+<th>Baseline Mean</th>
+<th>Post-Intervention Mean</th>
+<th>Improvement (Δ)</th>
+</tr>
+
+<tr>
+<td>Intervention Group Quality of Life</td>
+<td>74.73</td>
+<td>96.10</td>
+<td>21.37</td>
+</tr>
+
+<tr>
+<td>Control Group Quality of Life</td>
+<td>73.07</td>
+<td>90.47</td>
+<td>17.40</td>
+</tr>
+
+</table>
+
+<p>
+There was no significant difference in baseline quality of life between the intervention and control groups (p = 0.818). Following the intervention, both groups demonstrated significant improvements in quality of life (p &lt; 0.001). The intervention group experienced a greater increase in quality of life scores compared with the control group. The difference in improvement between groups was statistically significant (p = 0.010), indicating that strengthening Prolanis services through structured home visits was more effective than routine services alone.
+</p>
+
+</section>
+
+</div>
+
+<div class="sidebar">
+
+<div class="card">
+
+<div class="cover-box">
+    <img src="ChatGPT Image Jun 2, 2026, 06_09_57 PM.png" alt="JCN Cover">
+</div>
+
+<h3>Early View</h3>
+
+<p>
+Online Version of Record
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Article Tools</h3>
+
+<ul>
+    <li>
+        <a href="https://drive.google.com/uc?export=download&id=1hi8R1IVnvcP_sv26RMGLz1EesYBh94JG"
+           download="Journal_PDF.pdf">
+            📄 Download PDF
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="toggleCitation(); return false;">
+            📚 Export Citation
+        </a>
+
+        <div id="citationText" style="display:none; margin-top:10px; padding:10px; background:#f5f5f5; border-left:4px solid #007bff; font-size:14px;">
+            Weny Murni, Ernawati, & Aric Vranada. (2026).
+            <i>The Effect of Prolanis Services Plus Home Visits on the Quality of Life of Patients with Type 2 Diabetes Mellitus in the Working Area of Jatinegara Health Center, East Jakarta.</i>
+            Journal of Clinical Nursing.
+            https://doi.org/10.132111/jocn.17616
+        </div>
+    </li>
+
+    <li>
+        <a href="#">
+            🔗 Share Article
+        </a>
+    </li>
+
+    <li>
+        <a href="#">
+            💾 Save Article
+        </a>
+    </li>
+</ul>
+
+<script>
+function toggleCitation() {
+    const citation = document.getElementById("citationText");
+    citation.style.display =
+        citation.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Wiley Online Library | Journal of Clinical Nursing
+</div>
+<!-- CITATION POPUP -->
+
+<div id="citationModal" class="citation-modal">
+
+<div class="citation-content">
+
+<span class="close-btn" onclick="closeCitation()">
+×
+</span>
+
+<h3>APA Citation</h3>
+
+<textarea readonly>
+
+Weny Murni, Ernawati, Aric Vranada (2026).
+The Effect of Prolanis Services Plus Home Visits on the Quality of Life of Patients with Type 2 Diabetes Mellitus in the Working Area of Jatinegara Health Center, East Jakarta.
+Journal of Clinical Nursing.
+https://doi.org/10.132111/jocn.17616
+
+</textarea>
+
+<button onclick="copyCitation()">
+Copy Citation
+</button>
+
+</div>
+<script>
+
+function openCitation(){
+document.getElementById("citationModal").style.display="block";
+}
+
+function closeCitation(){
+document.getElementById("citationModal").style.display="none";
+}
+
+function copyCitation(){
+
+var copyText =
+document.querySelector("#citationModal textarea");
+
+copyText.select();
+document.execCommand("copy");
+
+alert("Citation copied!");
+
+}
+
+</script>
+</div>
+</body>
+</html>
